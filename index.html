@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
             height: 90vh;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -134,12 +135,25 @@
             animation: bounce 1.2s infinite;
         }
 
-        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes bounce {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-8px); }
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-8px);
+            }
         }
 
         .chat-input {
@@ -193,12 +207,14 @@
         }
     </style>
 </head>
+
 <body>
     <div class="chat-container">
         <!-- Header -->
         <div class="chat-header">
             <h1>🇩🇪 Max AI German Tutor</h1>
             <p>Your personal AI German language coach</p>
+            <p>Built by Sandeep Kumar Nayak 👨‍💻</p>
         </div>
 
         <!-- Messages -->
@@ -215,7 +231,9 @@
 
         <!-- Typing indicator -->
         <div class="typing-indicator" id="typingIndicator">
-            <div class="message-avatar" style="background:#2d3748; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;">🤖</div>
+            <div class="message-avatar"
+                style="background:#2d3748; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                🤖</div>
             <div class="typing-dots">
                 <span></span><span></span><span></span>
             </div>
@@ -228,12 +246,8 @@
 
         <!-- Input -->
         <div class="chat-input">
-            <input
-                type="text"
-                id="messageInput"
-                placeholder="Ask Max anything in German or English..."
-                onkeypress="handleKeyPress(event)"
-            />
+            <input type="text" id="messageInput" placeholder="Ask Max anything in German or English..."
+                onkeypress="handleKeyPress(event)" />
             <button onclick="sendMessage()" id="sendButton">Send 📤</button>
         </div>
     </div>
@@ -346,4 +360,5 @@
         }
     </script>
 </body>
+
 </html>
